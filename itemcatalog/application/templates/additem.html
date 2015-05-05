@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% include "_head.html" %}
+</head>
+<body>
+{% include "_header.html" %}
+	<div id="main">
+		<div id="content">
+			<div id="iteminfo">
+				<h2>Add item to '{{category.name}}' category</h2>
+
+				<form action="{{ url_for('new_item', category_id=category_id )}}" method="post" enctype="multipart/form-data">
+
+					<div style="float: left; text-align: right; padding: 7px; font-weight: bold;">
+						<p>Item name:<br />
+						&nbsp; <br />
+						Item price:<br />
+						&nbsp; <br />
+						Item image:<br />
+						&nbsp; <br />
+						Item description:<br />
+						</p>
+					</div>
+
+					<div style="float: left; padding: 7px;">
+						<p>
+						<input type="text" name="name" style="width: 400px;" /><br />
+						&nbsp; <br />
+						<input type="text" name="price" style="width: 100px;" /><br />
+						&nbsp; <br />
+						<input type="file" name="image" accept="image/*" /><br />
+						&nbsp; <br />
+						<textarea name="description" style="width: 400px; height: 200px"></textarea><br />
+						<input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+						<input type="submit" value="Add Item" />
+						<a href="{{ url_for('category_items', category_id=category.id )}}">Cancel</a>
+						<br />
+						</p>
+					</div>
+
+				</form>
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+{% include "_footer.html" %}
+{% include "_messages.html" %}
+</body>
+</html>
