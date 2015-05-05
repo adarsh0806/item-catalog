@@ -1,0 +1,8 @@
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		{% for message in messages %}
+<script> $(function() { $( "#dialog" ).dialog(); }); </script>
+<div id="dialog" title="Message" style="font-size: 10pt; font-weight: bold; color: #aa0000;">{{ message}}</div>
+		{% endfor %}
+	{% endif %}
+{% endwith %}
