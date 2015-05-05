@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Users</title>
+{% include "_head.html" %}
+	</head>
+<body>
+{% include "_header.html" %}
+	<div id="main">
+		<div id="content">
+			<div id="iteminfo">
+				<div style="float: left; text-indent: -11px; padding; bottom: 7px; font-size: 9pt;">&#171; <a href="/">Home</a></div>
+				<h2>Users</h2>
+
+				<div style="margin: auto; width: 500px; display: table;">
+					<div style="display: table-row;">
+						<div style="display: table-cell; padding: 3px; font-weight: bold; text-align: right;">ID</div>
+						<div style="display: table-cell; padding: 3px; font-weight: bold;">Name</div>
+						<div style="display: table-cell; padding: 3px; font-weight: bold;">Email</div>
+						<div style="display: table-cell; padding: 3px; font-weight: bold;">Picture</div>
+						<div style="display: table-cell; padding: 3px; font-weight: bold;">Items created</div>
+					</div>
+					{% for u in users %}
+					<div style="display: table-row; font-family: verdana, helvetica; font-size: 10pt;">
+						<div style="display: table-cell; padding: 3px; vertical-align: middle; text-align: right;">{{ u.id }}</div>
+						<div style="display: table-cell; padding: 3px; vertical-align: middle;">{{ u.name }}</div>
+						<div style="display: table-cell; padding: 3px; vertical-align: middle;">{{ u.email }}</div>
+						<div style="display: table-cell; padding: 3px; vertical-align: middle; text-align: center;">
+						{% if u.picture != None and u.picture != '' %}
+							<img src="{{ u.picture }}" height="35" alt="" />
+						{% endif %}
+						</div>
+						<div style="display: table-cell; padding: 3px; vertical-align: middle; text-align: center;"><a href="{{ url_for('user_items', user_id=u.id) }}">View</a></div>
+					</div>
+					{% endfor %}
+				</div>
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+{% include "_footer.html" %}
+</body>
+</html>
