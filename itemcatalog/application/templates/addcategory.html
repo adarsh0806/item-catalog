@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% include "_head.html" %}
+</head>
+<body>
+{% include "_header.html" %}
+	<div id="main">
+		<div id="content">
+			<div id="iteminfo">
+				<h2 style="text-align: center;">Add a new category</h2>
+
+				<form action="{{ url_for('new_category') }}" method="post" enctype="multipart/form-data">
+
+					<div style="display: table; width: 400px; margin: auto;">
+
+						<div style="float: left; text-align: right; padding: 7px; font-weight: bold;">
+							<p>Category name:</p>
+						</div>
+
+						<div style="float: left; padding: 7px;">
+							<p>
+							<input type="text" name="name" style="width: 200px;" /><br />
+							<input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+							<input type="submit" value="Add Category" />
+							<a href="{{ url_for('categories') }}">Cancel</a>
+							<br />
+							</p>
+						</div>
+
+					</div>
+
+				</form>
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+{% include "_footer.html" %}
+{% include "_messages.html" %}
+</body>
+</html>
