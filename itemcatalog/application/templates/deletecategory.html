@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% include "_head.html" %}
+</head>
+<body>
+{% include "_header.html" %}
+	<div id="main">
+		<div id="content">
+			<div id="iteminfo" style="text-align: center; line-height: 200%;">
+				<h3>Are you sure you want to delete the <em>{{category.name}}</em> category?<br />
+					Deleting the category will remove all items from the category.</h3>
+
+				<form action="{{ url_for('delete_category', category_id=category_id )}}" method="post">
+
+					<div>
+						<input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+						<input type="submit" value="Delete Category" /><br />
+						<p style="margin-top: 0;"><a href="{{ url_for('categories' )}}">Cancel</a></p>
+					</div>
+
+				</form>
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+{% include "_footer.html" %}
+</body>
+</html>
