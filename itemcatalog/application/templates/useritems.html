@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<!-- Website template by freewebsitetemplates.com -->
+<head>
+{% include "_head.html" %}
+</head>
+<body>
+{% include "_header.html" %}
+	<div id="main">
+		<div id="content">
+			<div id="categories">
+			</div>
+			<div id="items">
+				<h3>Items created by:</h3>
+					ID: {{ user.id }} - {{ user.name }}<br />
+				{% if useritems %}
+				<ul>
+					{% for i in useritems %}
+					<li><a href="{{url_for('item_info',category_id=i.category_id, item_id=i.id)}}">{{ i.name }}</a></li>
+					{% endfor %}
+				</ul>
+				{% else %}
+				<h5>- User has not created any items.</h5>
+				{% endif %}
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+{% include "_footer.html" %}
+</body>
+</html>
