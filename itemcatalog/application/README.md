@@ -1,4 +1,4 @@
-# Catalog Application
+# Item Catalog Application
 
 **_Note: These instructions assume you have Git, VirtualBox, and Vagrant installed. If you do not have these three applications installed, you can download them from the following links:_**
 
@@ -21,7 +21,7 @@ Run Git (Git Bash on Windows; regular terminal program on Mac or Linux systems) 
     requests
     httplib2
     flask-seasurf
-	passlib
+    passlib
 ```
 Now that you have Vagrant up and running, type **vagrant ssh** to log into your VM. Change to the /vagrant directory by typing **cd /vagrant**, then change to the application folder by typing **cd application**. This will take you to the folder where the application files reside.
 
