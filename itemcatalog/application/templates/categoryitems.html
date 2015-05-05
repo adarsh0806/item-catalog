@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% include "_head.html" %}
+</head>
+<body>
+{% include "_header.html" %}
+	<div id="main">
+		<div id="content">
+			<div id="categories">
+				<h2>Categories</h2>
+				<ul>
+					{% for c in categories %}
+					<li><a href="{{url_for('category_items',category_id=c.id)}}">{{ c.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div id="items">
+
+				{% if 'username' in session %}
+				<div><a id="myitems" href="{{url_for('my_items')}}">My items</a></div>
+				{% endif %}
+
+				<h2>{{ category.name }} items ({{count}})</h2>
+				{% if 'username' in session %}
+				<div><a id="additem" href="{{url_for('new_item',category_id=category.id)}}">Add item</a></div>
+				{% endif %}
+				<ul>
+					{% for i in items %}
+					<li><a href="{{url_for('item_info',category_id=i.category_id, item_id=i.id)}}">{{ i.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+{% include "_footer.html" %}
+{% include "_messages.html" %}
+</body>
+</html>
