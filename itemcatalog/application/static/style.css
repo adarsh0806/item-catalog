@@ -1,0 +1,176 @@
+/** Website template by freewebsitetemplates.com **/
+body{
+	margin:0;
+	padding:0;
+	background: url("/static/bg-pattern.png");
+	font-family: Georgia;
+}
+img{
+	border:0;
+}
+#header {
+	background: url("/static/bg-header.png");
+	background-position:top;
+	background-repeat: repeat-x;
+	height: 147px;
+	color: white;
+	text-align: center;
+}
+#header #container {
+	width: 960px;
+	padding-top: 21px;
+	margin: auto;
+}
+#header h1 {
+	font-size: 36pt;
+}
+#header a {
+	color: #ffff77;
+	text-decoration: none;
+}
+#header a:hover {
+	color: #ffaa44;
+}
+#header #login {
+	float: right;
+	margin-top: 44px
+}
+#header #login .loginBtn {
+	color: white;
+	background-color: #6C0F12;
+	border: 1px solid #A20F13;
+	font-weight: bold;
+	padding: 5px 13px 5px 13px;
+	font-family: tahoma;
+	font-size: 10pt;
+}
+#header #logo {
+	float: left;
+	margin-top: 27px
+}
+/*************End OF Header ****************/
+#main{
+	background: url("/static/bg-body.png");
+	background-position: top;
+	background-repeat: repeat-x;
+	margin: 0;
+	padding: 13px 0 13px 0;
+}
+#content{
+	display: table;
+	width: 940px;
+	margin: auto;
+	border-radius: 13px;
+	border: 3px solid #770000;
+	color: #770000;
+	background-color: #ffffff;
+}
+#content #categories {
+	display: table-cell;
+	width: 200px;
+	padding-left: 21px;
+	border-right: 3px double gray;
+}
+#content #categories ul {
+	list-style-type: square;
+}
+#content #items {
+	display: table-cell;
+	padding-left: 21px;
+}
+#content #items ul {
+	list-style-type: circle;
+	font-size: 11pt;
+}
+#content .ric {
+	display: inline;
+	font-style: italic;
+	color: gray;
+}
+
+#content #iteminfo {
+	display: table-cell;
+	padding: 21px;
+}
+#content #additem {
+	padding: 5px 7px 5px 7px;
+	border: 1px solid red;
+	border-radius: 7px;
+	background-color: #494A4B;
+	font-family: verdana, helvetica;
+	font-weight: bold;
+	font-size: 10pt;
+	margin-left: 9px;
+	color: white;
+	text-decoration: none;
+}
+#content #myitems {
+	float: right;
+	margin: 13px 13px 0 0;
+	padding: 3px 5px 3px 5px;
+	border: 1px solid red;
+	background-color: #cccccc;
+	border-radius: 3px;
+	font-family: verdana, helvetica;
+	font-weight: bold;
+	font-size: 10pt;
+	margin-left: 9px;
+	text-decoration: none;
+}
+/*********Start OF Footer Style**********/
+#footer {
+	clear: both;
+	width: 940px;
+	margin:0 auto;
+	color: white;
+	background-color: #000000;
+	border-radius: 13px;
+}
+#footer .section {
+	padding: 1px 21px 1px 21px;
+}
+#footer #feeds {
+	float: right;
+	text-align: right;
+	font-family: arial;
+	border-left: 3px double gray;
+	padding-left: 11px;
+}
+#footer #feeds a {
+	color: yellow;
+	font-family: arial;
+	font-size: 8pt;
+}
+.clearfix {
+	clear: both;
+	line-height: 0;
+}
+li {
+	line-height: 160%;
+	font-family: verdana, arial;
+}
+a {
+	color: blue;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+p {
+	font-family: verdana, arial, helvetica;
+	font-size: 10pt;
+	line-height: 160%;
+	color: black;
+}
+.productimage {
+	float: right;
+	padding: 0 0 21px 13px;
+}
+#dates {
+	float: right;
+	text-align: right;
+	font-family: verdana, arial, helvetica;
+	font-size: 7.5pt;
+	color: black;
+	line-height: 160%;
+}
