@@ -11,9 +11,9 @@
 
 ## Instructions
 
-Unzip the zip file and copy the itemcatalog folder to an appropriate location on your host machine.
+Unzip the zip file and copy the **itemcatalog** folder to an appropriate location on your host machine.
 
-Run Git (Git Bash on Windows; regular terminal program on Mac or Linux systems) and navigate to the itemcatalog folder, then type **vagrant up** to launch your virtual machine. This will load all the libraries needed to run the Catalog application. For reference, these are the libraries that are loaded:
+Run Git (Git Bash on Windows; regular terminal program on Mac or Linux systems) and navigate to the **itemcatalog** folder, then type **vagrant up** to launch your virtual machine. This will load all the libraries needed to run the Item Catalog application. For reference, these are the libraries that are loaded:
 ```
     flask
     sqlalchemy
